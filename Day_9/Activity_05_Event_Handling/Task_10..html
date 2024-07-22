@@ -1,0 +1,33 @@
+<!--  Add a mouseover event listner to an element that changes its border color -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main {
+        padding: 10px;
+        border: 4 solid black;
+        width: 200px;
+        text-align: center;
+        margin: 20px;
+    }
+</style>
+<body>
+    <div id="main" > hello world</div>
+   
+</body>
+<script>
+    let main = document.querySelector("#main");
+   
+    main.addEventListener("mouseover",function(){
+        main.style.borderColor =" blue";
+    })
+  main.addEventListener("mouseout",function(){
+    main.style.borderColor = "black";
+  })
+</script>
+</html>

@@ -1,0 +1,24 @@
+<!--  Add  a click event listner to a button that change the text content of a paragraph -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <div id="main" style="display: flex; align-items: center; justify-content: center; margin: 30px;">
+  <p id="paragraph" style=" height: 250px; width: 150px;  color: black; ">Hi All, I am softwere developer,  and looking for new opporunity for SDE 1 role</p>
+  <button id="button" style="background-color: blue; color: aliceblue; text-align: center;">change text</button>
+    </div>
+    </body>
+    <script>
+        let paragraph = document.querySelector("#paragraph");
+        let button = document.querySelector("#button");
+        button.addEventListener("click",function(){
+            paragraph.textContent = " hello world";
+        })
+    </script>
+</html>

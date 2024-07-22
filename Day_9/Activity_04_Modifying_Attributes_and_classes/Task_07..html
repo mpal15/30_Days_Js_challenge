@@ -1,0 +1,19 @@
+<!-- Select an HTML element and change one of its attributes(eg., src of an img tag) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <img   src="hello.jpg" alt="my image"/>
+    </div>
+</body>
+  <script>
+    let img = document.querySelector("img");
+    img.setAttribute("src","name.jpg");
+  </script>
+</html>
