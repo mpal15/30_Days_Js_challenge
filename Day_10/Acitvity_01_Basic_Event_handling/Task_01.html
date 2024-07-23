@@ -1,0 +1,35 @@
+<!-- Add a click event listner to a  button that changes the text content of a paragraph -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   p {
+    display: flex;
+    background-color: black;
+    color: aliceblue;
+    height: 150px;
+   }
+
+   button {
+    background-color: blue;
+    color: aliceblue;
+   }
+</style>
+<body>
+    <p> hi all, this is plateform of coding to practice.</p>
+    <button >click me</button>
+    
+</body>
+<script>
+ let para = document.querySelector("p");
+ let button = document.querySelector("button");
+ button.addEventListener("click",function(){
+    para.textContent = " hello world";
+ })
+</script>
+</html>

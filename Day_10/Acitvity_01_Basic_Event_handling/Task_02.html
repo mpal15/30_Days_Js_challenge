@@ -1,0 +1,31 @@
+<!-- Add a double-click event listner to an image that toggles its visibility -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #myImage{
+        width: 300px;
+        height: auto;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <img id="myImage"  src="http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/back06.jpg" alt="sample Image"/>
+</body>
+<script>
+  let image = document.querySelector("#myImage");
+  image.addEventListener("dblclick",function(){
+      if(image.style.display === 'none'){
+        image.style.display = 'block';
+      }else{
+        image.style.display = 'none';
+      }
+  })
+</script>
+</html>

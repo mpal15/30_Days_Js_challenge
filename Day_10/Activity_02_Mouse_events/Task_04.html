@@ -1,0 +1,29 @@
+<!-- Add a mouseout event listners to an element that resets its background color -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #main{
+        background-color: black;
+        color: white;
+        font-size: medium;
+    }
+</style>
+<body>
+    <div id="main">hi All , i am softwere engineer</div>
+</body>
+<script>
+  let main = document.querySelector("#main");
+  main.addEventListener('mouseover',function(){
+    main.style.backgroundColor = "blue";
+  })
+  main.addEventListener('mouseout',function(){
+    main.style.backgroundColor = "black";
+  })
+</script>
+</html>

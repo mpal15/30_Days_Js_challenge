@@ -1,0 +1,39 @@
+<!-- Add an event listner to a prevent element that listners for events from dynamically added child elements -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <div id="main">
+        <h2>Dynamic Item list</h2>
+        <button id="addItem">Add item</button>
+    </div>
+    <ul id="mylist">
+
+    </ul>
+</body>
+<script>
+ let main = document.querySelector("#main");
+ let mylist = document.querySelector("#mylist");
+ let button = document.querySelector("#addItem");
+ main.addEventListener('click',function(e){
+    if(e.target.tageName.toLowerCase() === 'li'){
+        console.log(e.target.textContent);
+    }
+ })
+
+ button.addEventListener('click',function(){
+    const newItem = document.createElement('li');
+    newItem.textContent = `Item ${mylist.children.length+1}`;
+    mylist.appendChild(newItem);
+ })
+</script>
+</html>

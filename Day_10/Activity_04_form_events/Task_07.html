@@ -1,0 +1,39 @@
+<!-- Add a submit event listner to a form that prevents the default submission and logs the form data to the console -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <form id="myForm" style="display: flex; align-items: center; justify-content: center; padding: 150px; margin: auto; gap: 10px;">
+        <label for="name">Name:</label>
+        <input type="text" placeholder=" enter the name" name="name" id="name" required/>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+
+        <button type="submit" style="background-color: blue; color: aliceblue;"> Submit</button>
+    </form>
+</body>
+<script>
+
+let form = document.querySelector("#myForm");
+ form.addEventListener('submit',function(e){
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = {};
+    formData.forEach((key,value)=>{
+        data[key] = value;
+    })
+    console.log(data);
+ })
+</script>
+</html>

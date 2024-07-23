@@ -1,0 +1,24 @@
+<!-- Add a keydown event listners to an input field that logs the key pressed to the console -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <label for="input">Input:</label>
+    <input  type="text" placeholder="enter the key" id="input"/>
+</body>
+<script>
+ let input = document.querySelector("#input");
+ input.addEventListener('keydown',function(e){
+    console.log("key:"+e.key);
+ })
+</script>
+</html>

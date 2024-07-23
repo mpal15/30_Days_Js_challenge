@@ -1,0 +1,25 @@
+<!-- Add a keyup event listner to an input filed that displays the current value in a paragraph -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <label for="input">input:</label>
+    <input type="text" id="input" placeholder="enter the sentence"/>
+    <p id="para">hi all,</p>
+</body>
+<script>
+ let input = document.querySelector("#input");
+ let para = document.querySelector("#para");
+ input.addEventListener('keyup',function(e){
+    para.textContent = e.target.value;
+ })
+</script>
+</html>
