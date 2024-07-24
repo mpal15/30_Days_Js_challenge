@@ -8,12 +8,16 @@ async function fetchfirstData(urls){
             throw new Error(`HTTP error! Status: ${firstresponse.status}`);
         }
         const data = await firstresponse.json();
+        console.log(data);
     } catch (error) {
         console.log('erorr', error);
     }
 }
 
-const urls = [];
+const urls = [
+    'https://datausa.io/api/data?drilldowns=Nation&measures=Population',
+    'https://picsum.photos/200/300',
+];
 
 
 fetchfirstData(urls);

@@ -19,8 +19,8 @@ async function fetchMultipleData(urls){
 }
 
 const urls = [
-    'https//api.com',
-    'https//api.com',
+    'https://datausa.io/api/data?drilldowns=Nation&measures=Population',
+    'https://pokeapi.co/api/v2/pokemon/ditto',
 ]
 
 fetchMultipleData(urls);

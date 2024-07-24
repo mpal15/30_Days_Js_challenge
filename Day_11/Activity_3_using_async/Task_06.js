@@ -14,7 +14,7 @@ function fetchdata(message,delay){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
            const data = `error is occured`;
-         
+           console.log(message);
            reject(data);
         },delay);
     })

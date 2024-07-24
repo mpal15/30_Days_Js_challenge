@@ -13,4 +13,4 @@ async function fetchdata(url){
     }
 }
 
-fetchdata(url);
+fetchdata('https://pokeapi.co/api/v2/pokemon/ditto');
