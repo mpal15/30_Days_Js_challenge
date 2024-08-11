@@ -1,0 +1,32 @@
+<!-- Write a script to save an object to sessionStorage by converting it to a JSON string.Retrive and parse the object, then log it-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>sessionStorage Object Example</title>
+</head>
+<body>
+    <h1>sessionStorage Object Example</h1>
+
+    <script>
+        // Step 1: Define an object to store
+        const user = {
+            name: "Jane Doe",
+            age: 28,
+            occupation: "Web Developer"
+        };
+
+        // Step 2: Convert the object to a JSON string and save it to sessionStorage
+        const key = "userData";
+        sessionStorage.setItem(key, JSON.stringify(user));
+
+        // Step 3: Retrieve the JSON string from sessionStorage
+        const retrievedData = sessionStorage.getItem(key);
+
+        // Step 4: Parse the JSON string back to an object
+        const retrievedObject = JSON.parse(retrievedData);
+
+        // Step 5: Log the retrieved object
+        console.log("Retrieved object from sessionStorage:", retrievedObject);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!-- Write a function that clear all data from bothh localStorage and sessionStorage . Verify that both storage are empty -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clear Storage Example</title>
+</head>
+<body>
+    <h1>Clear localStorage and sessionStorage Example</h1>
+
+    <script>
+        // Function to clear all data from both localStorage and sessionStorage
+        function clearAllStorage() {
+            // Clear localStorage
+            localStorage.clear();
+
+            // Clear sessionStorage
+            sessionStorage.clear();
+        }
+
+        // Function to verify that both storages are empty
+        function verifyStorage() {
+            const localStorageEmpty = localStorage.length === 0;
+            const sessionStorageEmpty = sessionStorage.length === 0;
+
+            console.log(`localStorage is empty: ${localStorageEmpty}`);
+            console.log(`sessionStorage is empty: ${sessionStorageEmpty}`);
+        }
+
+        // Example usage
+        clearAllStorage(); // Clear both storages
+        verifyStorage();   // Verify that both storages are empty
+    </script>
+</body>
+</html>

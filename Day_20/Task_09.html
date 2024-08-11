@@ -1,0 +1,39 @@
+<!-- Write a function that accepts akey and a value, and saves the value to both localStorage and sessionStorage. Retrive and log the avlue from both storage mechanisms -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>localStorage and sessionStorage Example</title>
+</head>
+<body>
+    <h1>localStorage and sessionStorage Example</h1>
+
+    <script>
+        // Function to save a value to both localStorage and sessionStorage
+        function saveToStorage(key, value) {
+            // Save to localStorage
+            localStorage.setItem(key, value);
+
+            // Save to sessionStorage
+            sessionStorage.setItem(key, value);
+        }
+
+        // Function to retrieve and log values from localStorage and sessionStorage
+        function retrieveAndLog(key) {
+            // Retrieve from localStorage
+            const localStorageValue = localStorage.getItem(key);
+            console.log(`Value from localStorage (${key}): ${localStorageValue}`);
+
+            // Retrieve from sessionStorage
+            const sessionStorageValue = sessionStorage.getItem(key);
+            console.log(`Value from sessionStorage (${key}): ${sessionStorageValue}`);
+        }
+
+        // Example usage
+        const key = "myKey";
+        const value = "Hello, Storage!";
+
+        saveToStorage(key, value);
+        retrieveAndLog(key);
+    </script>
+</body>
+</html>

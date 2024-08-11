@@ -1,0 +1,27 @@
+<!-- Weather App -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <div id="container">Weather Information</div>
+
+
+
+
+    <!-- Js code -->
+    <script>
+     const response = fetch('https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid={27c6de6963ad7b7bc730b377af99a896}')
+     console.log(response);
+     
+    </script>
+</body>
+</html>
